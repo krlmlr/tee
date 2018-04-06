@@ -25,6 +25,7 @@ The `r_tee()` function has (almost) the same signature as `callr::r()` but suppo
 ``` r
 library(tee)
 ret <- r_tee(function() { print("Hi!"); 42 }, tee = "hi.log")
+#> Loading required namespace: fansi
 #> [1] "Hi!"
 ret
 #> [1] 42
