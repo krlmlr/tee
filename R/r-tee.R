@@ -4,14 +4,20 @@ r_tee_impl <- function(..., tee, callback, show) {
   files <- lapply(tee, file, "w")
   on.exit(lapply(files, close))
 
+  if (requireNamespace("fansi")) {
+    strip_sgr <- fansi::strip_sgr
+  } else {
+    strip_sgr <- identity
+  }
+
   my_callback <- function(line) {
     if (show) {
       cat(line, "\n", sep = "")
     }
     #' @details
     #' ANSI escapes will be stripped automatically from the output via
-    #' [fansi::strip_sgr()].
-    stripped_line <- fansi::strip_sgr(line)
+    #' [fansi::strip_sgr()] if this package is available.
+    stripped_line <- strip_sgr(line)
     lapply(files, writeLines, text = stripped_line)
     if (!is.null(callback)) callback(line)
   }

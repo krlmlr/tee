@@ -8,7 +8,8 @@ License: GPL-3
 URL: https://github.com/krlmlr/tee, http://krlmlr.github.io/tee
 BugReports: https://github.com/krlmlr/tee/issues
 Imports: 
-    callr,
+    callr
+Suggests:
     fansi
 ByteCompile: true
 Encoding: UTF-8

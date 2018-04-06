@@ -95,6 +95,6 @@ file.
 }
 \details{
 ANSI escapes will be stripped automatically from the output via
-\code{\link[fansi:strip_sgr]{fansi::strip_sgr()}}.
+\code{\link[fansi:strip_sgr]{fansi::strip_sgr()}} if this package is available.
 This function forwards to \code{\link[callr:r]{callr::r()}}.
 }
