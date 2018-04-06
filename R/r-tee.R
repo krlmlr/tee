@@ -11,7 +11,7 @@ r_tee_impl <- function(..., tee, callback, show) {
   files <- lapply(tee, file, "w")
   on.exit(lapply(files, close))
 
-  if (requireNamespace("fansi"), quietly = TRUE) {
+  if (requireNamespace("fansi", quietly = TRUE)) {
     strip_sgr <- fansi::strip_sgr
   } else {
     strip_sgr <- identity
