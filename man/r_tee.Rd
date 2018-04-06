@@ -4,7 +4,7 @@
 \alias{r_tee}
 \title{Run and tee R code}
 \usage{
-r_tee(..., tee = character(), callback = NULL, show = NULL)
+r_tee(..., tee = character(), callback = NULL, show = TRUE)
 }
 \arguments{
 \item{...}{Arguments passed on to \code{callr::r}
@@ -83,8 +83,10 @@ with the \code{show} option; i.e. if \code{show = TRUE}, and a
 callback is provided, then the output is shown of the screen, and the
 callback is also called.}
 
-\item{show}{\code{[NULL]}\cr
-Do not set.}
+\item{show}{Logical, whether to show the standard output on the screen
+while the child process is running. Note that this is independent
+of the \code{stdout} and \code{stderr} arguments. The standard
+error is not shown currently.}
 }
 \description{
 Runs R code in an isolated session, writes output to the console and to a file.
