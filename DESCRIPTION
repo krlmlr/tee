@@ -1,0 +1,14 @@
+Package: tee
+Version: 0.0-0
+Title: What the Package Does (One Line, Title Case)
+Description: What the package does (one paragraph).
+Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org", comment = c(ORCID = "0000-0002-1416-3412"))
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Date: 2018-04-06
+BugReports: https://github.com/krlmlr/R/issues
+URL: https://github.com/krlmlr/R, http://krlmlr.github.io/R
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1.9000
