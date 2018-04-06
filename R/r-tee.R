@@ -4,9 +4,9 @@ r_tee_impl <- function(..., tee, callback, show) {
   #' @details
   #' The `tee` argument can contain relative or absolute paths.
   dirnames <- unique(dirname(tee))
-  is_missing <- !dir.exists(dirnames)
+  is_missing <- which(!dir.exists(dirnames))
   #' Nonexistant parent directories will be created.
-  dir.create(dirnames[is_missing], recursive = TRUE)
+  if (length(is_missing) > 0) dir.create(dirnames[is_missing], recursive = TRUE)
 
   files <- lapply(tee, file, "w")
   on.exit(lapply(files, close))
