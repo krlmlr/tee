@@ -20,16 +20,16 @@ remotes::install_local("krlmlr/tee")
 Example
 -------
 
-The `r_tee()` function has (almost) the same signature as `callr::r()` but supports a `tee` argument of type `character`. If set, all output will be written to the file(s) specified in the `tee` argument.
+The `r_tee()` function has (almost) the same signature as `callr::r()` but supports a `tee` argument of type `character`. If set, all output will be written to the file(s) specified in the `tee` argument. Missing directories are created automatically.
 
 ``` r
 library(tee)
-ret <- r_tee(function() { print("Hi!"); 42 }, tee = "hi.log")
+ret <- r_tee(function() { print("Hi!"); 42 }, tee = "log/hi.log")
 #> Loading required namespace: fansi
 #> [1] "Hi!"
 ret
 #> [1] 42
-readLines("hi.log")
+readLines("log/hi.log")
 #> [1] "[1] \"Hi!\""
 ```
 

@@ -94,6 +94,9 @@ Runs R code in an isolated session, writes output to the console and to a
 file.
 }
 \details{
+The \code{tee} argument can contain relative or absolute paths.
+Nonexistant parent directories will be created.
+
 ANSI escapes will be stripped automatically from the output via
 \code{\link[fansi:strip_sgr]{fansi::strip_sgr()}} if this package is available.
 This function forwards to \code{\link[callr:r]{callr::r()}}.
