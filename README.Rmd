@@ -42,3 +42,5 @@ readLines("hi.log")
 ```{r cleanup, include = FALSE}
 unlink("hi.log")
 ```
+
+ANSI escapes will be stripped automatically from the output via `fansi::strip_sgr()`.

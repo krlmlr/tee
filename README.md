@@ -31,3 +31,5 @@ ret
 readLines("hi.log")
 #> [1] "[1] \"Hi!\""
 ```
+
+ANSI escapes will be stripped automatically from the output via `fansi::strip_sgr()`.

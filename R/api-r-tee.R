@@ -1,7 +1,7 @@
 #' Run and tee R code
 #'
 #' Runs R code in an isolated session, writes output to the console and to a
-#' file.  Forwards to [callr::r()].
+#' file.
 #'
 #' @inheritDotParams callr::r
 #' @inheritParams callr::r
