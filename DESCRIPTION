@@ -1,14 +1,17 @@
 Package: tee
+Title: Log all process output to a file
 Version: 0.0-0
-Title: What the Package Does (One Line, Title Case)
-Description: What the package does (one paragraph).
+Date: 2018-04-06
 Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org", comment = c(ORCID = "0000-0002-1416-3412"))
+Description: Implements the 'tee' utility in R, for running R code in an isolated session, or arbitrary scripts.
 License: GPL-3
+URL: https://github.com/krlmlr/tee, http://krlmlr.github.io/tee
+BugReports: https://github.com/krlmlr/tee/issues
+Imports: 
+    callr,
+    fansi
+ByteCompile: true
 Encoding: UTF-8
 LazyData: true
-ByteCompile: true
-Date: 2018-04-06
-BugReports: https://github.com/krlmlr/R/issues
-URL: https://github.com/krlmlr/R, http://krlmlr.github.io/R
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1.9000
